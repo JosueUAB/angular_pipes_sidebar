@@ -1,0 +1,52 @@
+
+<main class="container mx-auto p-6 bg-gray-900 text-gray-400">
+
+  <div class="my-6 p-6 bg-gray-800 bg-opacity-50 rounded shadow-sm">
+   <p>usando la funcion fecha se tiene el siguiente formato donde se ira desconponiendo</p> {{fecha}}
+  </div>
+
+ </main>
+
+ <main class="container mx-auto p-6 bg-gray-900 text-gray-400">
+
+  <div class="my-6 p-6 bg-gray-800 bg-opacity-40 rounded shadow-sm">
+    <h6 class="border-b border-gray-700 pb-2 mb-4 text-white">{{'usando pipes '| titlecase}}</h6>
+    <div class="-mx-4 overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-700">
+        <thead>
+          <tr>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Nº</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">pipe usado</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">resultado</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-700">
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap">1</td>
+            <td class="px-6 py-4 whitespace-nowrap">'M/d/yy, h:mm:ss a'</td>
+            <td class="px-6 py-4 whitespace-nowrap">{{fecha| date: 'M/d/yy h:mm:ss a'}}</td>
+
+          </tr>
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap">2</td>
+            <td class="px-6 py-4 whitespace-nowrap">'MMM d, y, h:mm:ss a'</td>
+            <td class="px-6 py-4 whitespace-nowrap">{{fecha |date: 'MMM d, y, h:mm,ss a'}}</td>
+
+          </tr>
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap">3</td>
+            <td class="px-6 py-4 whitespace-nowrap">Michael Johnson</td>
+            <td class="px-6 py-4 whitespace-nowrap">{{fecha |date: 'dd LLLL YYYY' | uppercase}}</td>
+
+          </tr>
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap">4</td>
+            <td class="px-6 py-4 whitespace-nowrap">Maria Garcia</td>
+            <td class="px-6 py-4 whitespace-nowrap">30</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
